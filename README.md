@@ -27,6 +27,7 @@ The app runs in two modes, chosen at launch:
 - **Shared geospatial map** (Folium) — Google Roadmap/Satellite layers, the active recon geofence circle, color-coded markers with embedded annotated photos, and one-click Google Maps navigation, shared across all three tabs.
 - **Flexible CSV registry** — matches uploaded filenames to CSV coordinate records via exact path, basename, normalized text, or filename-stem matching, tolerant of varying column names (`Image_Path`, `Filename`, `Lat`/`Latitude`, etc.).
 - **Persistent shared JSON database** — all uploads, SOS signals, and the active drone zone persist across sessions in a single JSON file.
+- **Added manual location**- set for real life scenarios where drones are not yet deployed to disaster location.
 
 ## Project Structure
 
