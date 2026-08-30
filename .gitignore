@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+uploaded_media/
+data/drone photos only/
+data/shared_disaster_db.json
+shared_disaster_db.json
+*.pt
+*.ts
+.env
+.vscode/
