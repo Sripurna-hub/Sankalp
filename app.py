@@ -1,4 +1,5 @@
 import streamlit as st
+
 from backend.database import load_db
 from frontend.home import render_home
 from frontend.sidebar import render_sidebar
@@ -25,7 +26,7 @@ if st.session_state.app_mode is None:
     render_home()
 else:
     drone_info = db_data["drone_active_area"]
-    render_sidebar(drone_info)
+    render_sidebar(db_data, drone_info)
 
     if st.session_state.app_mode == "active":
         st.title("Active Disaster Command Center")
@@ -37,12 +38,9 @@ else:
             "Infrastructure Assessment Tab",
             "Rescue Team Tab"
         ])
-
         with tab_public:
             render_public_tab(db_data, drone_info)
-
         with tab_infra:
             render_infrastructure_tab(db_data, drone_info)
-
         with tab_rescue:
             render_rescue_tab(db_data, drone_info)
